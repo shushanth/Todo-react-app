@@ -5,6 +5,9 @@
 
 import React from 'react';
 import { render } from 'react-dom';
+import { AppState } from 'Components/HOC';
+
+import { createDOMElement } from 'Utils/helpers';
 
 import './styles.css';
 
@@ -15,6 +18,7 @@ export const TodoApp = ({name}) => {
   return (
     <div className="todo-list">
       <TodoHeader title={name}></TodoHeader>
+      <AppState></AppState>
     </div>
   )
 };
@@ -25,10 +29,7 @@ TodoApp.defaultProps = {
 
 /**
  * render App
- * TODO : use utils helpers
  */
-const rootDiv = document.createElement('div');
-rootDiv.id = "root";
-document.body.appendChild(rootDiv);
-render(<TodoApp />, document.querySelector('#root'));
+const rootElement = createDOMElement('div').create();
+render(<TodoApp/>, rootElement);
 

@@ -6,6 +6,14 @@ const APP_DIR = path.join(__dirname, '..', '..', 'src/modules/App');
 
 module.exports = {
   entry: `${APP_DIR}/todoApp.js`,
+  resolve: {
+    extensions: ['.js'],
+    alias: {
+      'Components': path.resolve(__dirname, '../../src/modules/App/components/'),
+      'Components/HOC': path.resolve(__dirname, '../../src/app/components/hoc/'),
+      'Utils/helpers': path.resolve(__dirname, '../../src/app/utils/'),
+    }
+  },
   module: {
     rules: [
       {

@@ -15,4 +15,4 @@ export const TodoHeader = ({title}) => {
 
 TodoHeader.propTypes = {
   title: PropTypes.string.isRequired
-}
+};
