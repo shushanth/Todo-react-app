@@ -17,7 +17,9 @@ export const TodoForm = ({addTodo, placeholder = '...'}) => {
   return (
     <div className="todo-input">
       <input onChange={handleChange} placeholder={placeholder} type="text"/>
-      <button onClick={() => oldInputValue && addTodo(getUpdatedValue())}>Add</button>
+      <button onClick={() => oldInputValue && addTodo(getUpdatedValue())}>
+        Add
+      </button>
     </div>
   );
 };

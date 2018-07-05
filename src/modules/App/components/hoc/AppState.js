@@ -38,7 +38,8 @@ export class AppState extends Component {
       state: this.state,
       methods: bindable(this, ['addTodo', 'deleteTodo'])
     };
-    let newChildren = React.Children.map(children, child => React.cloneElement(child, injectedProps));
+    let newChildren = React.Children
+      .map(children, child => React.cloneElement(child, injectedProps));
     return (
       <div>{newChildren}</div>
     );
