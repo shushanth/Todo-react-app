@@ -20,11 +20,16 @@ export class AppState extends Component {
   }
 
   addTodo(value) {
-    //Add todo...
+    const { todos } = this.state;
+    this.setState({
+      todos: [...todos, {text: value, id: uniqueId()}]
+    });
   };
 
   deleteTodo(index) {
-    //delete todo//
+    const { todos } = this.state;
+    let newState = removeItemInArray(todos, index);
+    this.setState({todos: newState});
   };
 
   render() {
