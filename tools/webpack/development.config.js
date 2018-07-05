@@ -8,7 +8,9 @@ module.exports = {
   resolve: {
     extensions: ['.js'],
     alias: {
-      'Components': path.resolve(__dirname, '../../src/modules/App/components/')
+      'Components': path.resolve(__dirname, '../../src/modules/App/components/'),
+      'Components/HOC': path.resolve(__dirname, '../../src/modules/App/components/hoc/'),
+      'Utils/helpers': path.resolve(__dirname, '../../src/modules/App/utils/'),
     }
   },
   module: {

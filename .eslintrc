@@ -1,3 +1,3 @@
 {
-  "extends": ["tools/eslint/lint-config.js"]
+  "extends": ["tools/eslint/config.js"]
 }
