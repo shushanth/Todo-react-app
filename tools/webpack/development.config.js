@@ -1,20 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const SRC_DIR = path.join(__dirname, '..', '..', 'src');
+const APP_DIR = path.join(__dirname, '..', '..', 'src/modules/App');
 
 module.exports = {
-  entry: `${SRC_DIR}/index.js`,
+  entry: `${APP_DIR}/component.js`,
   module: {
     rules: [
       {
         test: /\.js$/,
-        include: SRC_DIR,
+        include: APP_DIR,
         loader: 'babel-loader',
       },
       {
         test: /\.css$/,
-        include: SRC_DIR,
+        include: APP_DIR,
         use: ['style-loader', 'css-loader'],
       },
     ],
