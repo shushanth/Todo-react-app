@@ -5,7 +5,7 @@ const DIST_DIR = path.join(__dirname, '..', '..', 'dist');
 const APP_DIR = path.join(__dirname, '..', '..', 'src/modules/App');
 
 module.exports = {
-  entry: `${APP_DIR}/component.js`,
+  entry: `${APP_DIR}/todoApp.js`,
   module: {
     rules: [
       {
