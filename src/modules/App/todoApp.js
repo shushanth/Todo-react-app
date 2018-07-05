@@ -1,5 +1,4 @@
 /**
- * @shushanth
  * App component
  * root level component
  */
@@ -7,17 +6,22 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import './styles.css';
+
+//components
+import { TodoHeader } from 'Components';
+
 export const TodoApp = ({name}) => {
   return (
-    <div>
-      {name}
+    <div className="todo-list">
+      <TodoHeader title={name}></TodoHeader>
     </div>
   )
 };
 
 TodoApp.defaultProps = {
   name: 'todos'
-}
+};
 
 /**
  * render App
