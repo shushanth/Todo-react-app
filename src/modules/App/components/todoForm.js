@@ -6,6 +6,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const TodoForm = ({addTodo, placeholder = '...'}) => {
+  //TODO: use recompose to manage state
+  //used hacky way as below
   let oldInputValue = '';
   const handleChange = (event) => {
     const { value } = event.target;
