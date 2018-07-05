@@ -1,5 +1,4 @@
 /**
- * @shushanth
  * helper utils
  */
 
@@ -35,3 +34,11 @@ export const bindable = (obj, fns) => {
   return bindableObj;
 };
 
+/**
+ * return new array after removing the index in old array
+ * @param {array} arr
+ * @param {number} index
+ */
+export const removeItemInArray = (arr, index) => {
+  return arr.filter((a, i) => i != index);
+};

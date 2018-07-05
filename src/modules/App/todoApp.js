@@ -12,13 +12,18 @@ import { createDOMElement } from 'Utils/helpers';
 import './styles.css';
 
 //components
-import { TodoHeader } from 'Components';
+import {
+  TodoList,
+  TodoHeader
+} from 'Components';
 
 export const TodoApp = ({name}) => {
   return (
     <div className="todo-list">
       <TodoHeader title={name}></TodoHeader>
-      <AppState></AppState>
+      <AppState>
+        <TodoList></TodoList>
+      </AppState>
     </div>
   )
 };
