@@ -60,13 +60,6 @@ export const Component = props => (
 
 Component.displayName = 'App';
 ```
-
-### Contributing
-
-Initialise the project as a git repository and push to your favourite git host.
-
-Open one or more PRs into the remote master branch of your project. Share the remote repository with your contact at Lodgify.
-
 A PR will not be approved if any of the following commands fail
   - `npm run lint`
   - `npm run build`
